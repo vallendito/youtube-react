@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input,Container,Row,Col } from 'reactstrap';
+import { Container,Row,Col } from 'reactstrap';
 import '../assets/style.css';
 
 class SearchBar extends Component {
@@ -14,11 +14,12 @@ class SearchBar extends Component {
             <Container>
                 <Row>
                     <Col>
-                        <Input 
-                        className="search-input"
-                        value={this.state.term}
-                        onChange={event => this.setState({term: event.target.value})} 
-                        />
+                        <div className="search-bar">
+                            <input 
+                            value={this.state.term}
+                            onChange={event => this.setState({term: event.target.value})} 
+                            />
+                        </div>
                     </Col>
                 </Row>
                 
