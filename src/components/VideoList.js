@@ -1,7 +1,6 @@
 import React from 'react';
 import VideoListItem from './VideoListItem';
-import { Container,Row, Col, ListGroup } from 'reactstrap';
-import "../assets/style.css";
+import { Col } from 'reactstrap';
 
 const VideoList = (props) => {
    const videoItems = props.videos.map((video) => {
@@ -12,15 +11,11 @@ const VideoList = (props) => {
     });
 
     return (    
-        <Container>
-            <Row>
-                <Col md="6">
-                    <ListGroup>
-                        {videoItems}
-                    </ListGroup>
-                </Col>
-            </Row>
-        </Container>
+
+        <Col md="8">
+                {videoItems}
+        </Col>
+
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,Col,Row } from 'reactstrap';
+import { Col } from 'reactstrap';
 
 const VideoDetail = ({video}) => {
     if (!video) {
@@ -10,8 +10,7 @@ const VideoDetail = ({video}) => {
     const url = `https://www.youtube.com/embed/${videoId}`;
 
     return(
-        <Container>
-            <Row>
+
                 <Col md="8">
                     <div className="video-detail">
                         <div className="embed-responsive embed-responsive-16by9">
@@ -23,8 +22,6 @@ const VideoDetail = ({video}) => {
                         </div>
                     </div>
                 </Col>
-            </Row>
-        </Container>
         
     );
 }
